@@ -15,4 +15,4 @@ jobs:
       with:
         go-version: ^1.13
 
-    - run: make run
+    - run: make setup run
