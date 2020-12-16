@@ -1,0 +1,14 @@
+name: Main
+on:
+  watch:
+    types: [started]
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-go@v2
+        with:
+          go-version: 1.13
+      - run: make setup run
